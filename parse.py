@@ -32,7 +32,7 @@ def get_vacancies(url):
         next_page = get_next_page_or_none(required_html)
 
         if next_page is not None:
-            next_page = 'https:/hh.ru' + next_page
+            next_page = f'https:/hh.ru{next_page}'
             loop_breaker = 20
             while True:
                 loop_breaker -= 1
@@ -43,7 +43,7 @@ def get_vacancies(url):
                 vacancies = {**vacancies, **parse_vacancies(new_required_html)}
                 next_page = get_next_page_or_none(new_required_html)
                 if next_page is not None:
-                    next_page = 'https:/hh.ru' + next_page
+                    next_page = f'https:/hh.ru{next_page}'
                 else:
                     break
 
