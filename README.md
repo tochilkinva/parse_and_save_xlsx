@@ -1,6 +1,9 @@
 # parse_and_save_xlsx
 Tutorial project for parsing a site and saving the results to an Excel xlsx file
 
+### Технологии
+Python, Beautifulsoup, Selenium
+
 ### Как запустить проект:
 
 Клонировать репозиторий и перейти в него в командной строке:
